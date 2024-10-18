@@ -1,6 +1,15 @@
 <template>
   <footer>
-    <h1>Olá Mundo!</h1>
+    <div class="navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <p> 2024 &copy; Edgar Junior</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </footer>
 </template>
 
