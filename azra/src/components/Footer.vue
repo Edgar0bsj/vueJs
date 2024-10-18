@@ -21,5 +21,8 @@ export default {
 </script>
 
 <style>
-
+#app > footer > div > div > div > div > p {
+  color: aliceblue;
+  margin: 1.0rem 0;
+}
 </style>
