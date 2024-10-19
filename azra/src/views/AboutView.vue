@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <CaroselCompo/>
 </template>
+
+<script>
+import CaroselCompo from '@/components/CaroselCompo.vue';
+export default {
+  components:{
+    CaroselCompo
+  }
+}
+</script>
+
+<style>
+</style>
