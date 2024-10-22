@@ -45,15 +45,8 @@
                 <div
                   class="d-flex align-items-center justify-content-center homeLinks"
                 >
-                  <a class="btn btn-outline-danger" href="Historia.html"
-                    ><strong>História</strong></a
-                  >
-                  <a class="btn btn-outline-danger" href="Galeria.html"
-                    ><strong>Galeria</strong></a
-                  >
-                  <a class="btn btn-outline-danger" href="Detalhes.html"
-                    ><strong>Detalhes</strong></a
-                  >
+                  <RouterLink class="btn btn-outline-danger" to="/confirmar">História</RouterLink>
+                  <RouterLink class="btn btn-outline-danger" to="/confirmar">Confirmar-Presença</RouterLink>
                 </div>
               </div>
             </div>
@@ -91,15 +84,8 @@
                 <div
                   class="d-flex align-items-center justify-content-center homeLinks"
                 >
-                  <a class="btn btn-outline-danger" href="Historia.html"
-                    ><strong>História</strong></a
-                  >
-                  <a class="btn btn-outline-danger" href="Galeria.html"
-                    ><strong>Galeria</strong></a
-                  >
-                  <a class="btn btn-outline-danger" href="Detalhes.html"
-                    ><strong>Detalhes</strong></a
-                  >
+                <RouterLink class="btn btn-outline-danger" to="/confirmar">História</RouterLink>
+                <RouterLink class="btn btn-outline-danger" to="/confirmar">Confirmar-Presença</RouterLink>
                 </div>
               </div>
             </div>
@@ -137,15 +123,8 @@
                 <div
                   class="d-flex align-items-center justify-content-center homeLinks"
                 >
-                  <a class="btn btn-outline-danger" href="Historia.html"
-                    ><strong>História</strong></a
-                  >
-                  <a class="btn btn-outline-danger" href="Galeria.html"
-                    ><strong>Galeria</strong></a
-                  >
-                  <a class="btn btn-outline-danger" href="Detalhes.html"
-                    ><strong>Detalhes</strong></a
-                  >
+                <RouterLink class="btn btn-outline-danger" to="/confirmar">História</RouterLink>
+                <RouterLink class="btn btn-outline-danger" to="/confirmar">Confirmar-Presença</RouterLink>
                 </div>
               </div>
             </div>
