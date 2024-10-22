@@ -45,7 +45,7 @@
                 <div
                   class="d-flex align-items-center justify-content-center homeLinks"
                 >
-                  <RouterLink class="btn btn-outline-danger" to="/confirmar">História</RouterLink>
+                  <RouterLink class="btn btn-outline-danger" to="/historia">História</RouterLink>
                   <RouterLink class="btn btn-outline-danger" to="/confirmar">Confirmar-Presença</RouterLink>
                 </div>
               </div>
@@ -84,7 +84,7 @@
                 <div
                   class="d-flex align-items-center justify-content-center homeLinks"
                 >
-                <RouterLink class="btn btn-outline-danger" to="/confirmar">História</RouterLink>
+                <RouterLink class="btn btn-outline-danger" to="/historia">História</RouterLink>
                 <RouterLink class="btn btn-outline-danger" to="/confirmar">Confirmar-Presença</RouterLink>
                 </div>
               </div>
@@ -123,7 +123,7 @@
                 <div
                   class="d-flex align-items-center justify-content-center homeLinks"
                 >
-                <RouterLink class="btn btn-outline-danger" to="/confirmar">História</RouterLink>
+                <RouterLink class="btn btn-outline-danger" to="/historia">História</RouterLink>
                 <RouterLink class="btn btn-outline-danger" to="/confirmar">Confirmar-Presença</RouterLink>
                 </div>
               </div>
@@ -206,13 +206,13 @@ export default {
   background-position: center;
 }
 #carosel1{
-  background-image: url('../assets/img/temporario.jpg');
+  background-image: url('../assets/img/carosel1.jpg');
 }
 #carosel2{
-  background-image: url('../assets/img/temporario.jpg');
+  background-image: url('../assets/img/carosel2.jpg');
 }
 #carosel3{
-  background-image: url('../assets/img/temporario.jpg');
+  background-image: url('../assets/img/carosel3.jpg');
 }
 /* ========================================== */
 </style>

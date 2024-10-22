@@ -25,7 +25,7 @@
                 transform: translate(-50%, -50%);
               "
             >
-            Estamos ansiosos para comemorar com você!
+              Estamos ansiosos para comemorar com você!
             </div>
             <form>
               <div class="row gx-4 gy-3">
@@ -114,17 +114,13 @@
           <div class="col-md-4 wow fadeIn" data-wow-delay="0.3s">
             <div class="p-4 border-secondary" style="border-style: double">
               <h4>Data</h4>
-              <p class="mb-0 text-dark">
-                01 Mar 2025
-              </p>
+              <p class="mb-0 text-dark">01 Mar 2025</p>
             </div>
           </div>
           <div class="col-md-4 wow fadeIn" data-wow-delay="0.5s">
             <div class="p-4 border-secondary" style="border-style: double">
               <h4>Horario</h4>
-              <p class="mb-0 text-dark">
-                PM 16:00
-              </p>
+              <p class="mb-0 text-dark">PM 16:00</p>
             </div>
           </div>
           <div class="col-12 wow fadeIn" data-wow-delay="0.2s">
@@ -132,11 +128,21 @@
               <iframe
                 class="w-100"
                 style="height: 450px; margin-bottom: -6px"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.5342979622237!2d-43.43141838996827!3d-22.78265783335877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9966ea64893187%3A0x717191f5ec4ff7db!2sMesquita!5e0!3m2!1spt-BR!2sbr!4v1729610526809!5m2!1spt-BR!2sbr"                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.5342979622237!2d-43.43141838996827!3d-22.78265783335877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9966ea64893187%3A0x717191f5ec4ff7db!2sMesquita!5e0!3m2!1spt-BR!2sbr!4v1729610526809!5m2!1spt-BR!2sbr"
+                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row d-flex align-self-center align-items-center">
+        <div class="col">
+          <RouterLink class="btn btn-outline-danger" to="/"
+            >Voltar</RouterLink
+          >
         </div>
       </div>
     </div>
