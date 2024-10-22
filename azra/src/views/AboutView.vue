@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import CaroselCompo from '@/components/CaroselCompo.vue';
+import CaroselCompo from "@/components/CaroselCompo.vue";
 export default {
-  components:{
-    CaroselCompo
-  }
-}
+  components: {
+    CaroselCompo,
+  },
+};
 </script>
 
 <style>

@@ -13,7 +13,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- ====================================================== -->
-          <div class="carousel-item active" style="background-color: aqua">
+          <div class="carousel-item active caroselImgBack" id="carosel1">
             <!-- ================================================== -->
             <div class="carousel-caption">
               <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px">
@@ -59,7 +59,7 @@
             </div>
           </div>
           <!-- ====================================================== -->
-          <div class="carousel-item">
+          <div class="carousel-item caroselImgBack" id="carosel2">
             <!-- ====================================================== -->
             <div class="carousel-caption">
               <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px">
@@ -105,7 +105,7 @@
             </div>
           </div>
           <!-- ====================================================== -->
-          <div class="carousel-item">
+          <div class="carousel-item caroselImgBack" id="carosel3">
             <!-- ====================================================== -->
             <div class="carousel-caption">
               <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px">
@@ -178,16 +178,57 @@
 export default {
   name: "CaroselCompo",
   props: {
-    imgCarosel: String,
+    imgCarosel1: String,
+    imgCarosel2: String,
+    imgCarosel3: String,
   },
 };
 </script>
   
   <style>
-#caroselImg {
-  background-image: url("../assets/img/temporario.jpg");
+
+/* Buttons */
+.caroselImgBack > div > div > div.d-flex.align-items-center.justify-content-center.homeLinks a{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: auto 4px;
+}
+
+/* Titulo Principal */
+.caroselImgBack > div > div > div.d-inline-block.border-end-0.border-start-0.border-secondary.p-2.mb-4 > h4{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+/* Nome da aniversariante */
+.caroselImgBack > div > div > h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+/* ========== CAROSEL ==================== */
+.caroselImgBack {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+#carosel1{
+  background-image: url('../assets/img/temporario.jpg');
+}
+#carosel2{
+  background-image: url('../assets/img/temporario.jpg');
+}
+#carosel3{
+  background-image: url('../assets/img/temporario.jpg');
+}
+/* ========================================== */
 </style>
