@@ -197,13 +197,18 @@ export default {
   margin: auto 4px;
 }
 
+
 /* Titulo Principal */
-.caroselImgBack > div > div > div.d-inline-block.border-end-0.border-start-0.border-secondary.p-2.mb-4 > h4{
+.homeTitulo{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* Nome da aniversariante */
