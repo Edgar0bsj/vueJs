@@ -38,11 +38,12 @@
                     >
                     <input
                       v-model="name"
+                      required
                       type="text"
                       class="form-control py-3 border-0"
-                      id="Examplename"
+                      id="name"
                       placeholder="Nome"
-                      style="color: black;"
+                      style="color: black"
                     />
                   </div>
                 </div>
@@ -53,11 +54,12 @@
                     >
                     <input
                       v-model="sobrenome"
+                      required
                       type="text"
                       class="form-control py-3 border-0"
-                      id="Examplename"
+                      id="sobrenome"
                       placeholder="Sobrenome"
-                      style="color: black;"
+                      style="color: black"
                     />
                   </div>
                 </div>
@@ -69,9 +71,9 @@
                     <select
                       v-model="qtdConvidados"
                       class="form-control bg-white text-dark py-3 border-0"
-                      id="exampleselect"
+                      id="convidados"
                       placeholder="Number Of Guests"
-                      style="color: black;"
+                      style="color: black"
                     >
                       <option>Somente eu</option>
                       <option>02 Convidados</option>
@@ -89,11 +91,11 @@
                       v-model="mensagem"
                       name="text"
                       class="form-control border-0"
-                      id="exampletextarea"
+                      id="mensagem"
                       cols="30"
                       rows="5"
                       placeholder="Message"
-                      style="color: black;"
+                      style="color: black"
                     ></textarea>
                   </div>
                 </div>
@@ -102,6 +104,12 @@
                   class="col-12 text-center wow fadeIn"
                   data-wow-delay="0.1s"
                 >
+                  <!-- Alerta de sucesso -->
+                  <div v-if="sucesso" class="alert alert-success" role="alert">
+                    Dados enviados com sucesso!
+                  </div>
+
+                  <!-- ================== -->
                   <button
                     type="submit"
                     class="btn btn-primary btn-primary-outline-0 py-3 px-5"
@@ -166,9 +174,16 @@ export default {
       sobrenome: "",
       qtdConvidados: "",
       mensagem: "",
+      sucesso: false,
     };
   },
   methods: {
+    resetForm(){
+      this.name = ''
+      this.sobrenome = ''
+      this.qtdConvidados = ''
+      this.mensagem = ''
+    },
     submitForm() {
       const formData = new FormData();
       formData.append("entry.1888297634", this.name);
@@ -185,6 +200,12 @@ export default {
       })
         .then(() => {
           console.log("Presença Confirmada com sucesso!");
+          this.sucesso = true; // -> mostra o alerta de sucesso
+          this.resetForm(); // -> resetar o formulario
+
+          setTimeout(() => {
+            this.sucesso = false;
+          }, 3000);
         })
         .catch((err) => {
           console.error(`Erro ao enviar os dados ${err}`);
