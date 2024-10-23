@@ -27,7 +27,9 @@
             >
               Estamos ansiosos para comemorar com você!
             </div>
-            <form>
+            <!-- capturndo os dados -->
+            <form @submit.prevent="submitForm">
+              <!-- =============== -->
               <div class="row gx-4 gy-3">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                   <div class="form-group">
@@ -35,10 +37,12 @@
                       >Nome</label
                     >
                     <input
+                      v-model="name"
                       type="text"
                       class="form-control py-3 border-0"
                       id="Examplename"
                       placeholder="Nome"
+                      style="color: black;"
                     />
                   </div>
                 </div>
@@ -48,10 +52,12 @@
                       >Sobrenome</label
                     >
                     <input
+                      v-model="sobrenome"
                       type="text"
                       class="form-control py-3 border-0"
                       id="Examplename"
                       placeholder="Sobrenome"
+                      style="color: black;"
                     />
                   </div>
                 </div>
@@ -61,9 +67,11 @@
                       >Número de convidados</label
                     >
                     <select
+                      v-model="qtdConvidados"
                       class="form-control bg-white text-dark py-3 border-0"
                       id="exampleselect"
                       placeholder="Number Of Guests"
+                      style="color: black;"
                     >
                       <option>Somente eu</option>
                       <option>02 Convidados</option>
@@ -78,12 +86,14 @@
                       >Mensagem</label
                     >
                     <textarea
+                      v-model="mensagem"
                       name="text"
                       class="form-control border-0"
                       id="exampletextarea"
                       cols="30"
                       rows="5"
                       placeholder="Message"
+                      style="color: black;"
                     ></textarea>
                   </div>
                 </div>
@@ -93,6 +103,7 @@
                   data-wow-delay="0.1s"
                 >
                   <button
+                    type="submit"
                     class="btn btn-primary btn-primary-outline-0 py-3 px-5"
                   >
                     Confirma Presença!
@@ -140,9 +151,7 @@
     <div class="container">
       <div class="row d-flex align-self-center align-items-center">
         <div class="col">
-          <RouterLink class="btn btn-outline-danger" to="/"
-            >Voltar</RouterLink
-          >
+          <RouterLink class="btn btn-outline-danger" to="/">Voltar</RouterLink>
         </div>
       </div>
     </div>
@@ -150,7 +159,39 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      name: "",
+      sobrenome: "",
+      qtdConvidados: "",
+      mensagem: "",
+    };
+  },
+  methods: {
+    submitForm() {
+      const formData = new FormData();
+      formData.append("entry.1888297634", this.name);
+      formData.append("entry.791172253", this.sobrenome);
+      formData.append("entry.116684679", this.qtdConvidados);
+      formData.append("entry.1064734079", this.mensagem);
+      const googleForm =
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeu9EXmlmBDby4i5Hx4MVo3BNw-fQkZ3G-LHeR7gD3FCAdjLQ/formResponse";
+
+      fetch(googleForm, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      })
+        .then(() => {
+          console.log("Presença Confirmada com sucesso!");
+        })
+        .catch((err) => {
+          console.error(`Erro ao enviar os dados ${err}`);
+        });
+    },
+  },
+};
 </script>
 
 <style>
